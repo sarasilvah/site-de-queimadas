@@ -1,0 +1,302 @@
+/* Reset básico para remover margens e paddings padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definição da tipografia geral e do fundo do site */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa; /* Cor de fundo clara */
+    color: #333; /* Cor do texto principal */
+    scroll-behavior: smooth; /* Rola suavemente ao clicar em links de âncoras */
+}
+
+/* Estilização do cabeçalho do site */
+header {
+    background-color: #1e3d59; /* Cor de fundo escura do cabeçalho */
+    color: #fff; /* Cor do texto no cabeçalho */
+    padding: 50px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil abaixo do cabeçalho */
+}
+
+header h1 {
+    font-size: 3.3em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Estilização do menu de navegação */
+nav ul {
+    list-style: none; /* Remove os marcadores padrão de lista */
+    padding: 0;
+}
+
+
+nav ul li {
+    display: inline-block; /* Exibe os itens de menu em linha */
+    margin: 0 15px;
+}
+
+/* Estilo dos links de navegação */
+nav ul li a {
+    color: #fff; /* Cor dos links no menu */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Transição suave ao passar o mouse */
+    font-size: 1.2em;
+}
+
+/* Efeito hover nos links de navegação */
+nav ul li a:hover {
+    color: #f1c40f; /* Muda a cor ao passar o mouse */
+}
+
+/* Estilização do conteúdo principal */
+main {
+    padding: 40px 20px;
+    max-width: 1200px; /* Define uma largura máxima */
+    margin: 0 auto; /* Centraliza o conteúdo */
+}
+
+/* Estilo para os títulos principais */
+.intro h2 {
+    margin-bottom: 20px;
+    color: #1e3d59; /* Cor do título */
+    font-size: 2em;
+    font-weight: 600;
+    border-bottom: 3px solid #f1c40f; /* Linha amarela abaixo do título */
+    display: inline-block;
+}
+
+/* Estilização da seção de imagens */
+.images {
+    display: flex; /* Exibe as imagens lado a lado */
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+/* Estilo para as imagens */
+.images img {
+    width: 45%; /* Define o tamanho das imagens */
+    height: auto;
+    border: 4px solid #1e3d59; /* Bordas ao redor das imagens */
+    border-radius: 10px; /* Bordas arredondadas */
+    transition: transform 0.3s ease; /* Efeito de transição suave ao passar o mouse */
+}
+
+/* Efeito hover nas imagens */
+.images img:hover {
+    transform: scale(1.05); /* Aumenta a imagem ligeiramente ao passar o mouse */
+}
+
+/* Estilização do rodapé */
+footer {
+    background-color: #1e3d59; /* Cor de fundo escura */
+    color: #fff; /* Cor do texto no rodapé */
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Sombra no topo do rodapé */
+    font-size: 0.9em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilo para o texto do rodapé */
+footer p {
+    margin: 0;
+    font-size: 1.2em;
+    color: #ffffff;
+}
+
+/* Botão de ação - usado em várias partes do site */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f1c40f; /* Cor de fundo do botão */
+    color: #1e3d59; /* Cor do texto do botão */
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+/* Efeito hover nos botões */
+.btn:hover {
+    background-color: #d4ac0d; /* Cor de fundo ao passar o mouse */
+    color: #fff; /* Muda a cor do texto */
+}
+
+/* Estilos responsivos para telas menores */
+@media (max-width: 768px) {
+    /* Coloca as imagens empilhadas em telas menores */
+    .images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .images img {
+        width: 80%; /* Aumenta o tamanho da imagem para 80% da largura */
+        margin-bottom: 20px;
+    }
+
+    /* Ajusta o menu para ser exibido verticalmente */
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    /* Ajustes no tamanho dos textos em telas menores */
+    header h1 {
+        font-size: 2em;
+    }
+
+    .intro h2 {
+        font-size: 2.0em;
+    }
+
+    .intro p {
+        font-size: 1.1em;
+    }
+}
+
+/* Estilização dos formulários (usado na página de contato) */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ao redor do formulário */
+    max-width: 600px; /* Define uma largura máxima */
+    margin: 40px auto; /* Centraliza o formulário */
+}
+
+/* Estilo do título do formulário */
+form h2 {
+    color: #1e3d59; /* Cor do título */
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+/* Estilo para os rótulos dos campos de formulário */
+form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Estilo dos campos de entrada e textarea */
+form input,
+form textarea {
+    width: 100%; /* Campos ocupam toda a largura */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* Efeito nos campos ao focar */
+form input:focus,
+form textarea:focus {
+    border-color: #f1c40f; /* Muda a cor da borda ao focar */
+    outline: none;
+}
+
+/* Estilo do botão de envio do formulário */
+form button {
+    padding: 10px 20px;
+    background-color: #1e3d59; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+/* Efeito hover no botão de envio do formulário */
+form button:hover {
+    background-color: #f1c40f; /* Cor de fundo ao passar o mouse */
+    color: #1e3d59; /* Muda a cor do texto */
+}
+
+.container-causes {
+    display: flex;
+    justify-content: space-between; /* Distribui o espaço entre o texto e o vídeo */
+}
+
+.causes {
+    flex: 1; /* O texto ocupa um espaço flexível */
+    margin-right: 20px; /* Dá uma margem para o vídeo não colar no texto */
+}
+
+.video-causes{
+    flex: 1; /* O vídeo também ocupa um espaço flexível */
+    margin: 10px;
+}
+
+h2 {
+    font-size: 2.0em;
+    color:  #1e3d59;
+    border-bottom: 3px solid #f1c40f; /* Linha amarela abaixo do título */
+}
+
+/* Estilização do parágrafo*/
+p {
+    font-size: 1.4em;
+    color: #555;
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+ul, li {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.8;
+}
+
+h3 {
+    font-size: 1.8em;
+    color:  #1e3d59;
+    border-bottom: 3px solid #f1c40f; /* Linha amarela abaixo do título */
+}
+
+ /* Style da Galeria de Fotos */
+ .galeria {
+    text-align: center;
+}
+
+.foto-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.foto {
+    width: 300px;
+    margin: 10px;
+    text-align: center;
+}
+
+.foto img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #0d0f70; /* Adiciona uma borda cinza de 2px */
+    transition: transform 0.3s ease-in-out; /* Adiciona uma transição de escala ao passar o mouse */
+}
+
+
+.fonte {
+    font-size: 12px;
+    color: #888;
+}
+
+.foto:hover img {
+    transform: scale(1.1); /* Aumenta ligeiramente o tamanho da imagem ao passar o mouse */
+}
